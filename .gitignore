@@ -1,0 +1,43 @@
+# Inspired by github.com/arsaboo/homeassistant-config/blob/master/.gitignore
+
+# Backups
+backups/
+
+# Blueprints
+blueprints/*/homeassistant
+
+# Caches
+.cache/
+
+# Custom Components (managed by HACS)
+custom_components/
+
+# Databases
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# Dependencies & Generated
+components/
+deps/
+tts/
+
+# gtfs2
+gtfs2/
+www/gtfs2/
+
+# Logs
+*.log
+*.log.*
+
+# Runtime
+.HA_VERSION
+.ha_run.lock
+.storage/
+
+# Secrets
+secrets.yaml
+
+# Web Subdirectories
+www/community/
