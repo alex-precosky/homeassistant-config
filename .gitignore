@@ -37,6 +37,7 @@ www/gtfs2/
 .storage/
 
 # Secrets
+certs/
 secrets.yaml
 
 # Web Subdirectories
