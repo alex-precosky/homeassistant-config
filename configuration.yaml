@@ -2,6 +2,15 @@
 # Loads default set of integrations. Do not remove.
 default_config:
 
+lovelace:
+  dashboards:
+    front-door:
+      mode: yaml
+      filename: dashboards/front-door.yaml
+      title: Front door
+      icon: mdi:home-outline
+      show_in_sidebar: true
+
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes

@@ -1,0 +1,60 @@
+views:
+  - title: Front Door
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Cameras
+            heading_style: title
+          - type: picture-entity
+            camera_view: auto
+            camera_image: camera.chez_salex_doorbell_fluent
+            entity: camera.chez_salex_doorbell_fluent
+            show_entity_picture: true
+            card_mod:
+              style: |
+                hui-image{
+                  transform: rotate(90deg);
+                }
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: lock.front_door
+          - type: entity
+            entity: binary_sensor.front_door_door
+          - type: history-graph
+            entities:
+              - entity: binary_sensor.front_door_door
+      - type: grid
+        cards:
+          - type: heading
+            heading: Weather and Robot
+          - show_current: true
+            show_forecast: true
+            type: weather-forecast
+            entity: weather.forecast_home
+            forecast_type: hourly
+          - graph: line
+            type: sensor
+            entity: sensor.alex_bot_battery
+            detail: 1
+            grid_options:
+              columns: 12
+              rows: 2
+          - type: entity
+            entity: vacuum.alex_bot
+            grid_options:
+              columns: 12
+              rows: 2
+      - type: grid
+        cards:
+          - type: heading
+            heading: Lights
+            heading_style: title
+          - type: light
+            entity: light.hubby_office
+          - type: light
+            entity: light.entryway
+    badges:
+      - type: entity
+        entity: weather.forecast_home
