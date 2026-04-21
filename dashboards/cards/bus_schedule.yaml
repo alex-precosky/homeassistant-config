@@ -1,0 +1,27 @@
+type: markdown
+content: |
+  {% macro format_departure(departures, index) -%}
+    {% if departures and departures|length > index -%}
+      {{ ((as_timestamp((departures[index]['departure_realtime_datetime'])) - as_timestamp(now())) / 60) | int }} min
+    {%- else -%}
+      N/A
+    {%- endif %}
+  {%- endmacro -%}
+
+  <table>
+    <tr><td>Route</td><td>Departure 1</td><td>Departure 2</td></tr>
+    <tr>
+      <td>#40 Downtown</td>
+      {%- set departures = state_attr('sensor.gtfs_bus_40_to_downtown_19320_local_stop_zone_home',
+  'next_departures_lines') %}
+      <td>{{ format_departure(departures, 0) }}</td>
+      <td>{{ format_departure(departures, 1) }}</td>
+    </tr>
+    <tr>
+      <td>#40 Northgate</td>
+      {%- set departures = state_attr('sensor.gtfs_bus_40_to_downtown_19550_local_stop_zone_home',
+  'next_departures_lines') %}
+      <td>{{ format_departure(departures, 0) }}</td>
+      <td>{{ format_departure(departures, 1) }}</td>
+    </tr>
+  </table>

@@ -28,7 +28,7 @@ views:
       - type: grid
         cards:
           - type: heading
-            heading: Weather and Robot
+            heading: Weather, Bus, Robot
           - show_current: true
             show_forecast: true
             type: weather-forecast
@@ -41,6 +41,7 @@ views:
             grid_options:
               columns: 12
               rows: 2
+          - !include cards/bus_schedule.yaml
           - type: entity
             entity: vacuum.alex_bot
             grid_options:
