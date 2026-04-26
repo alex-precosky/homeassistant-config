@@ -1,0 +1,10 @@
+views:
+ - title: Hubs Office
+   sections:
+   - type: grid
+     cards:
+     - type: custom:scheduler-card
+       domains:
+         - light
+         - climate
+       title: Scheduler

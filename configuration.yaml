@@ -14,6 +14,12 @@ lovelace:
 http:
   ssl_certificate: certs/cert.pem
   ssl_key: certs/privkey.pem
+    alex-office:
+      mode: yaml
+      filename: dashboards/alex-office.yaml
+      title: Hubs Office
+      icon: mdi:home-outline
+      show_in_sidebar: true
 
 # Load frontend themes from the themes folder
 frontend:
