@@ -8,3 +8,5 @@ views:
          - light
          - climate
        title: Scheduler
+     - type: thermostat
+       entity: climate.smart_thermostat_25101157452413601202c4e7ae224b1f
