@@ -56,6 +56,14 @@ views:
             entity: light.hubby_office
           - type: light
             entity: light.entryway
+      - type: grid
+        cards:
+          - type: thermostat
+            entity: climate.smart_thermostat_25101135275820601202c4e7ae224d17
+          - type: custom:scheduler-card
+            domains:
+              - climate
+            title: Scheduler
     badges:
       - type: entity
         entity: weather.forecast_home
