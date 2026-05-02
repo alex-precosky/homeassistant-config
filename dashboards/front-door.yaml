@@ -19,6 +19,13 @@ views:
             entity: lock.front_door
           - type: entity
             entity: binary_sensor.front_door_door
+          - type: thermostat
+            entity: climate.smart_thermostat_25101135275820601202c4e7ae224d17
+          - type: custom:scheduler-card
+            domains:
+              - climate
+            title: Scheduler
+
       - type: grid
         cards:
           - show_current: true
@@ -26,6 +33,7 @@ views:
             type: weather-forecast
             entity: weather.forecast_home
             forecast_type: hourly
+          - !include cards/bus_schedule.yaml
           - graph: line
             type: sensor
             entity: sensor.alex_bot_battery
@@ -33,7 +41,6 @@ views:
             grid_options:
               columns: 12
               rows: 2
-          - !include cards/bus_schedule.yaml
           - type: entity
             entity: vacuum.alex_bot
             grid_options:
@@ -45,11 +52,3 @@ views:
             entity: light.hubby_office
           - type: light
             entity: light.entryway
-      - type: grid
-        cards:
-          - type: thermostat
-            entity: climate.smart_thermostat_25101135275820601202c4e7ae224d17
-          - type: custom:scheduler-card
-            domains:
-              - climate
-            title: Scheduler
