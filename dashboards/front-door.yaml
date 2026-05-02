@@ -61,6 +61,3 @@ views:
             domains:
               - climate
             title: Scheduler
-    badges:
-      - type: entity
-        entity: weather.forecast_home
