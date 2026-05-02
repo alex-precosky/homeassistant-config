@@ -22,9 +22,6 @@ views:
             entity: lock.front_door
           - type: entity
             entity: binary_sensor.front_door_door
-          - type: history-graph
-            entities:
-              - entity: binary_sensor.front_door_door
       - type: grid
         cards:
           - type: heading
