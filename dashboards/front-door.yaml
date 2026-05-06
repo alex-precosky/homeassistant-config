@@ -8,11 +8,6 @@ views:
             camera_image: camera.chez_salex_doorbell_fluent
             entity: camera.chez_salex_doorbell_fluent
             show_entity_picture: true
-            card_mod:
-              style: |
-                hui-image{
-                  transform: rotate(90deg);
-                }
           - show_name: true
             show_icon: true
             type: button
