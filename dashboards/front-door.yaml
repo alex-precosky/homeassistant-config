@@ -29,13 +29,6 @@ views:
             entity: weather.forecast_home
             forecast_type: hourly
           - !include cards/bus_schedule.yaml
-          - graph: line
-            type: sensor
-            entity: sensor.alex_bot_battery
-            detail: 1
-            grid_options:
-              columns: 12
-              rows: 2
           - type: entity
             entity: vacuum.alex_bot
             grid_options:
