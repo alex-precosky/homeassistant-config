@@ -14,12 +14,6 @@ views:
             entity: lock.front_door
           - type: entity
             entity: binary_sensor.front_door_door
-          - type: thermostat
-            entity: climate.smart_thermostat_25101135275820601202c4e7ae224d17
-          - type: custom:scheduler-card
-            domains:
-              - climate
-            title: Scheduler
 
       - type: grid
         cards:
@@ -51,3 +45,5 @@ views:
             grid_options:
               columns: 4
               rows: 3
+          - type: thermostat
+            entity: climate.smart_thermostat_25101135275820601202c4e7ae224d17
