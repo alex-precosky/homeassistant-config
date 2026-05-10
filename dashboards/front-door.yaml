@@ -3,6 +3,8 @@ views:
     sections:
       - type: grid
         cards:
+          - type: 'custom:alarmo-card'
+            entity: alarm_control_panel.alarmo
           - type: picture-entity
             camera_view: auto
             camera_image: camera.chez_salex_doorbell_fluent
@@ -14,8 +16,6 @@ views:
             entity: lock.front_door
           - type: entity
             entity: binary_sensor.front_door_door
-          - type: 'custom:alarmo-card'
-            entity: alarm_control_panel.alarmo
 
       - type: grid
         cards:
