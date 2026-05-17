@@ -6,10 +6,7 @@ views:
           - type: 'custom:alarmo-card'
             entity: alarm_control_panel.alarmo
           - type: picture-entity
-            camera_view: auto
-            camera_image: camera.chez_salex_doorbell_fluent
             entity: camera.chez_salex_doorbell_fluent
-            show_entity_picture: true
           - show_name: true
             show_icon: true
             type: button
