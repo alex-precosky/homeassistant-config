@@ -47,11 +47,7 @@ views:
             icon: mdi:fire
             tap_action:
               action: perform-action
-              perform_action: climate.set_hvac_mode
-              target:
-                entity_id: climate.kitchen_mini_split
-              data:
-                hvac_mode: heat
+              perform_action: script.kitchen_mini_split_heat
             grid_options:
               columns: 3
               rows: 1
@@ -61,11 +57,7 @@ views:
             icon: mdi:snowflake
             tap_action:
               action: perform-action
-              perform_action: climate.set_hvac_mode
-              target:
-                entity_id: climate.kitchen_mini_split
-              data:
-                hvac_mode: cool
+              perform_action: script.kitchen_mini_split_cool
             grid_options:
               columns: 3
               rows: 1
@@ -98,11 +90,7 @@ views:
             icon: mdi:fire
             tap_action:
               action: perform-action
-              perform_action: climate.set_hvac_mode
-              target:
-                entity_id: climate.bedroom_mini_split
-              data:
-                hvac_mode: heat
+              perform_action: script.bedroom_mini_split_heat
             grid_options:
               columns: 3
               rows: 1
@@ -112,11 +100,7 @@ views:
             icon: mdi:snowflake
             tap_action:
               action: perform-action
-              perform_action: climate.set_hvac_mode
-              target:
-                entity_id: climate.bedroom_mini_split
-              data:
-                hvac_mode: cool
+              perform_action: script.bedroom_mini_split_cool
             grid_options:
               columns: 3
               rows: 1

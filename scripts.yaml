@@ -1,3 +1,63 @@
+kitchen_mini_split_heat:
+  alias: Kitchen Mini-Split Heat
+  description: Set kitchen mini-split to heat mode at high fan speed
+  sequence:
+    - action: climate.set_hvac_mode
+      target:
+        entity_id: climate.kitchen_mini_split
+      data:
+        hvac_mode: heat
+    - action: climate.set_fan_mode
+      target:
+        entity_id: climate.kitchen_mini_split
+      data:
+        fan_mode: high
+
+kitchen_mini_split_cool:
+  alias: Kitchen Mini-Split Cool
+  description: Set kitchen mini-split to cool mode at high fan speed
+  sequence:
+    - action: climate.set_hvac_mode
+      target:
+        entity_id: climate.kitchen_mini_split
+      data:
+        hvac_mode: cool
+    - action: climate.set_fan_mode
+      target:
+        entity_id: climate.kitchen_mini_split
+      data:
+        fan_mode: high
+
+bedroom_mini_split_heat:
+  alias: Bedroom Mini-Split Heat
+  description: Set bedroom mini-split to heat mode at high fan speed
+  sequence:
+    - action: climate.set_hvac_mode
+      target:
+        entity_id: climate.bedroom_mini_split
+      data:
+        hvac_mode: heat
+    - action: climate.set_fan_mode
+      target:
+        entity_id: climate.bedroom_mini_split
+      data:
+        fan_mode: high
+
+bedroom_mini_split_cool:
+  alias: Bedroom Mini-Split Cool
+  description: Set bedroom mini-split to cool mode at high fan speed
+  sequence:
+    - action: climate.set_hvac_mode
+      target:
+        entity_id: climate.bedroom_mini_split
+      data:
+        hvac_mode: cool
+    - action: climate.set_fan_mode
+      target:
+        entity_id: climate.bedroom_mini_split
+      data:
+        fan_mode: high
+
 kitchen_mini_split_on:
   alias: Kitchen Mini-Split On
   description: Turn on kitchen mini-split physically and sync HA state
