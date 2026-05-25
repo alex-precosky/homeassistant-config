@@ -37,12 +37,7 @@ views:
             icon: mdi:power-on
             tap_action:
               action: perform-action
-              perform_action: remote.send_command
-              target:
-                entity_id: remote.kitchen_universal_remote
-              data:
-                device: kitchen_mini_split
-                command: power_on
+              perform_action: script.kitchen_mini_split_on
             grid_options:
               columns: 3
               rows: 1
@@ -93,12 +88,7 @@ views:
             icon: mdi:power-on
             tap_action:
               action: perform-action
-              perform_action: remote.send_command
-              target:
-                entity_id: remote.bedroom_universal_remote
-              data:
-                device: bedroom_mini_split
-                command: power_on
+              perform_action: script.bedroom_mini_split_on
             grid_options:
               columns: 3
               rows: 1

@@ -1,3 +1,31 @@
+kitchen_mini_split_on:
+  alias: Kitchen Mini-Split On
+  description: Turn on kitchen mini-split physically and sync HA state
+  sequence:
+    - action: remote.send_command
+      target:
+        entity_id: remote.kitchen_universal_remote
+      data:
+        device: kitchen_mini_split
+        command: power_on
+    - action: climate.turn_on
+      target:
+        entity_id: climate.kitchen_mini_split
+
+bedroom_mini_split_on:
+  alias: Bedroom Mini-Split On
+  description: Turn on bedroom mini-split physically and sync HA state
+  sequence:
+    - action: remote.send_command
+      target:
+        entity_id: remote.bedroom_universal_remote
+      data:
+        device: bedroom_mini_split
+        command: power_on
+    - action: climate.turn_on
+      target:
+        entity_id: climate.bedroom_mini_split
+
 kitchen_mini_split_temp_up:
   alias: Kitchen Mini-Split Temp Up
   description: Turn on kitchen mini-split and increase target temperature by 1°C
