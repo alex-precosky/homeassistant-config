@@ -1,0 +1,63 @@
+kitchen_mini_split_temp_up:
+  alias: Kitchen Mini-Split Temp Up
+  description: Turn on kitchen mini-split and increase target temperature by 1°C
+  sequence:
+    - action: remote.send_command
+      target:
+        entity_id: remote.kitchen_universal_remote
+      data:
+        device: kitchen_mini_split
+        command: power_on
+    - action: climate.set_temperature
+      target:
+        entity_id: climate.kitchen_mini_split
+      data:
+        temperature: "{{ state_attr('climate.kitchen_mini_split', 'temperature') | float + 1 }}"
+
+kitchen_mini_split_temp_down:
+  alias: Kitchen Mini-Split Temp Down
+  description: Turn on kitchen mini-split and decrease target temperature by 1°C
+  sequence:
+    - action: remote.send_command
+      target:
+        entity_id: remote.kitchen_universal_remote
+      data:
+        device: kitchen_mini_split
+        command: power_on
+    - action: climate.set_temperature
+      target:
+        entity_id: climate.kitchen_mini_split
+      data:
+        temperature: "{{ state_attr('climate.kitchen_mini_split', 'temperature') | float - 1 }}"
+
+bedroom_mini_split_temp_up:
+  alias: Bedroom Mini-Split Temp Up
+  description: Turn on bedroom mini-split and increase target temperature by 1°C
+  sequence:
+    - action: remote.send_command
+      target:
+        entity_id: remote.bedroom_universal_remote
+      data:
+        device: bedroom_mini_split
+        command: power_on
+    - action: climate.set_temperature
+      target:
+        entity_id: climate.bedroom_mini_split
+      data:
+        temperature: "{{ state_attr('climate.bedroom_mini_split', 'temperature') | float + 1 }}"
+
+bedroom_mini_split_temp_down:
+  alias: Bedroom Mini-Split Temp Down
+  description: Turn on bedroom mini-split and decrease target temperature by 1°C
+  sequence:
+    - action: remote.send_command
+      target:
+        entity_id: remote.bedroom_universal_remote
+      data:
+        device: bedroom_mini_split
+        command: power_on
+    - action: climate.set_temperature
+      target:
+        entity_id: climate.bedroom_mini_split
+      data:
+        temperature: "{{ state_attr('climate.bedroom_mini_split', 'temperature') | float - 1 }}"

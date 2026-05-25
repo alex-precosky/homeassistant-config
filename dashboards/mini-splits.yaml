@@ -1,0 +1,185 @@
+views:
+  - title: Mini Splits
+    sections:
+      - type: grid
+        cards:
+          # ── Turn Both Off ────────────────────────────────────────────
+          - type: button
+            name: Turn Both Off
+            icon: mdi:power
+            tap_action:
+              action: perform-action
+              perform_action: climate.turn_off
+              target:
+                entity_id:
+                  - climate.kitchen_mini_split
+                  - climate.bedroom_mini_split
+            grid_options:
+              columns: 12
+              rows: 1
+
+          # ── Status cards ─────────────────────────────────────────────
+          - type: thermostat
+            entity: climate.kitchen_mini_split
+            grid_options:
+              columns: 6
+              rows: 4
+
+          - type: thermostat
+            entity: climate.bedroom_mini_split
+            grid_options:
+              columns: 6
+              rows: 4
+
+          # ── Kitchen mode buttons ──────────────────────────────────────
+          - type: button
+            name: Kitchen On
+            icon: mdi:power-on
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.kitchen_universal_remote
+              data:
+                device: kitchen_mini_split
+                command: power_on
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Kitchen Heat
+            icon: mdi:fire
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_hvac_mode
+              target:
+                entity_id: climate.kitchen_mini_split
+              data:
+                hvac_mode: heat
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Kitchen Cool
+            icon: mdi:snowflake
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_hvac_mode
+              target:
+                entity_id: climate.kitchen_mini_split
+              data:
+                hvac_mode: cool
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Kitchen Off
+            icon: mdi:power
+            tap_action:
+              action: perform-action
+              perform_action: climate.turn_off
+              target:
+                entity_id: climate.kitchen_mini_split
+            grid_options:
+              columns: 3
+              rows: 1
+
+          # ── Bedroom mode buttons ──────────────────────────────────────
+          - type: button
+            name: Bedroom On
+            icon: mdi:power-on
+            tap_action:
+              action: perform-action
+              perform_action: remote.send_command
+              target:
+                entity_id: remote.bedroom_universal_remote
+              data:
+                device: bedroom_mini_split
+                command: power_on
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Bedroom Heat
+            icon: mdi:fire
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_hvac_mode
+              target:
+                entity_id: climate.bedroom_mini_split
+              data:
+                hvac_mode: heat
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Bedroom Cool
+            icon: mdi:snowflake
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_hvac_mode
+              target:
+                entity_id: climate.bedroom_mini_split
+              data:
+                hvac_mode: cool
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Bedroom Off
+            icon: mdi:power
+            tap_action:
+              action: perform-action
+              perform_action: climate.turn_off
+              target:
+                entity_id: climate.bedroom_mini_split
+            grid_options:
+              columns: 3
+              rows: 1
+
+          # ── Temperature buttons ───────────────────────────────────────
+          - type: button
+            name: Kitchen Temp -
+            icon: mdi:thermometer-minus
+            tap_action:
+              action: perform-action
+              perform_action: script.kitchen_mini_split_temp_down
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Kitchen Temp +
+            icon: mdi:thermometer-plus
+            tap_action:
+              action: perform-action
+              perform_action: script.kitchen_mini_split_temp_up
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Bedroom Temp -
+            icon: mdi:thermometer-minus
+            tap_action:
+              action: perform-action
+              perform_action: script.bedroom_mini_split_temp_down
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Bedroom Temp +
+            icon: mdi:thermometer-plus
+            tap_action:
+              action: perform-action
+              perform_action: script.bedroom_mini_split_temp_up
+            grid_options:
+              columns: 3
+              rows: 1
