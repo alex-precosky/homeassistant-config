@@ -143,7 +143,7 @@ views:
               columns: 3
               rows: 1
 
-          # ── Temperature buttons ───────────────────────────────────────
+          # ── Temperature buttons ──────────────────────────────────────
           - type: button
             name: Kitchen Temp -
             icon: mdi:thermometer-minus
@@ -183,3 +183,14 @@ views:
             grid_options:
               columns: 3
               rows: 1
+
+      - type: grid
+        cards:
+          - type: custom:scheduler-card
+            discover_existing: false
+            tags: mini-split
+            title: Mini-Split Schedule
+            entities:
+              - climate.kitchen_mini_split
+              - climate.bedroom_mini_split
+              - remote.bedroom_universal_remote
