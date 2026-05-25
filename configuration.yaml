@@ -28,3 +28,19 @@ frontend:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+smartir:
+  check_updates: false
+
+climate:
+  - platform: smartir
+    name: Kitchen Mini-Split
+    unique_id: kitchen_mini_split
+    device_code: 1284
+    controller_data: remote.kitchen_universal_remote
+
+  - platform: smartir
+    name: Bedroom Mini-Split
+    unique_id: bedroom_mini_split
+    device_code: 1284
+    controller_data: remote.bedroom_universal_remote
