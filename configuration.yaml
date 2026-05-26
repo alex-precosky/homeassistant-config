@@ -28,6 +28,13 @@ http:
       icon: mdi:home-outline
       show_in_sidebar: true
 
+    my-robots:
+      mode: yaml
+      filename: dashboards/robots.yaml
+      title: Robots
+      icon: mdi:robot-vacuum
+      show_in_sidebar: true
+
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
