@@ -31,9 +31,15 @@ views:
               columns: 6
               rows: 4
 
-          # ── Kitchen mode buttons ──────────────────────────────────────
+          # ── Kitchen ──────────────────────────────────────────────────
+          - type: markdown
+            content: "## Kitchen"
+            grid_options:
+              columns: 12
+              rows: 1
+
           - type: button
-            name: Kitchen On
+            name: "On"
             icon: mdi:power-on
             tap_action:
               action: perform-action
@@ -43,7 +49,7 @@ views:
               rows: 1
 
           - type: button
-            name: Kitchen Heat
+            name: Heat
             icon: mdi:fire
             tap_action:
               action: perform-action
@@ -53,7 +59,7 @@ views:
               rows: 1
 
           - type: button
-            name: Kitchen Cool
+            name: Cool
             icon: mdi:snowflake
             tap_action:
               action: perform-action
@@ -63,7 +69,7 @@ views:
               rows: 1
 
           - type: button
-            name: Kitchen Off
+            name: "Off"
             icon: mdi:power
             tap_action:
               action: perform-action
@@ -74,9 +80,91 @@ views:
               columns: 3
               rows: 1
 
-          # ── Bedroom mode buttons ──────────────────────────────────────
           - type: button
-            name: Bedroom On
+            name: Low
+            icon: mdi:fan-speed-1
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_fan_mode
+              target:
+                entity_id: climate.kitchen_mini_split
+              data:
+                fan_mode: low
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Med
+            icon: mdi:fan-speed-2
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_fan_mode
+              target:
+                entity_id: climate.kitchen_mini_split
+              data:
+                fan_mode: medium
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: High
+            icon: mdi:fan-speed-3
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_fan_mode
+              target:
+                entity_id: climate.kitchen_mini_split
+              data:
+                fan_mode: high
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Auto
+            icon: mdi:fan-auto
+            tap_action:
+              action: perform-action
+              perform_action: climate.set_fan_mode
+              target:
+                entity_id: climate.kitchen_mini_split
+              data:
+                fan_mode: auto
+            grid_options:
+              columns: 3
+              rows: 1
+
+          - type: button
+            name: Temp -
+            icon: mdi:thermometer-minus
+            tap_action:
+              action: perform-action
+              perform_action: script.kitchen_mini_split_temp_down
+            grid_options:
+              columns: 6
+              rows: 1
+
+          - type: button
+            name: Temp +
+            icon: mdi:thermometer-plus
+            tap_action:
+              action: perform-action
+              perform_action: script.kitchen_mini_split_temp_up
+            grid_options:
+              columns: 6
+              rows: 1
+
+          # ── Bedroom ──────────────────────────────────────────────────
+          - type: markdown
+            content: "## Bedroom"
+            grid_options:
+              columns: 12
+              rows: 1
+
+          - type: button
+            name: "On"
             icon: mdi:power-on
             tap_action:
               action: perform-action
@@ -86,7 +174,7 @@ views:
               rows: 1
 
           - type: button
-            name: Bedroom Heat
+            name: Heat
             icon: mdi:fire
             tap_action:
               action: perform-action
@@ -96,7 +184,7 @@ views:
               rows: 1
 
           - type: button
-            name: Bedroom Cool
+            name: Cool
             icon: mdi:snowflake
             tap_action:
               action: perform-action
@@ -106,7 +194,7 @@ views:
               rows: 1
 
           - type: button
-            name: Bedroom Off
+            name: "Off"
             icon: mdi:power
             tap_action:
               action: perform-action
@@ -117,66 +205,8 @@ views:
               columns: 3
               rows: 1
 
-          # ── Kitchen fan speed buttons ────────────────────────────────
           - type: button
-            name: Kitchen Fan Low
-            icon: mdi:fan-speed-1
-            tap_action:
-              action: perform-action
-              perform_action: climate.set_fan_mode
-              target:
-                entity_id: climate.kitchen_mini_split
-              data:
-                fan_mode: low
-            grid_options:
-              columns: 3
-              rows: 1
-
-          - type: button
-            name: Kitchen Fan Med
-            icon: mdi:fan-speed-2
-            tap_action:
-              action: perform-action
-              perform_action: climate.set_fan_mode
-              target:
-                entity_id: climate.kitchen_mini_split
-              data:
-                fan_mode: medium
-            grid_options:
-              columns: 3
-              rows: 1
-
-          - type: button
-            name: Kitchen Fan High
-            icon: mdi:fan-speed-3
-            tap_action:
-              action: perform-action
-              perform_action: climate.set_fan_mode
-              target:
-                entity_id: climate.kitchen_mini_split
-              data:
-                fan_mode: high
-            grid_options:
-              columns: 3
-              rows: 1
-
-          - type: button
-            name: Kitchen Fan Auto
-            icon: mdi:fan-auto
-            tap_action:
-              action: perform-action
-              perform_action: climate.set_fan_mode
-              target:
-                entity_id: climate.kitchen_mini_split
-              data:
-                fan_mode: auto
-            grid_options:
-              columns: 3
-              rows: 1
-
-          # ── Bedroom fan speed buttons ────────────────────────────────
-          - type: button
-            name: Bedroom Fan Low
+            name: Low
             icon: mdi:fan-speed-1
             tap_action:
               action: perform-action
@@ -190,7 +220,7 @@ views:
               rows: 1
 
           - type: button
-            name: Bedroom Fan Med
+            name: Med
             icon: mdi:fan-speed-2
             tap_action:
               action: perform-action
@@ -204,7 +234,7 @@ views:
               rows: 1
 
           - type: button
-            name: Bedroom Fan High
+            name: High
             icon: mdi:fan-speed-3
             tap_action:
               action: perform-action
@@ -218,7 +248,7 @@ views:
               rows: 1
 
           - type: button
-            name: Bedroom Fan Auto
+            name: Auto
             icon: mdi:fan-auto
             tap_action:
               action: perform-action
@@ -231,45 +261,24 @@ views:
               columns: 3
               rows: 1
 
-          # ── Temperature buttons ──────────────────────────────────────
           - type: button
-            name: Kitchen Temp -
-            icon: mdi:thermometer-minus
-            tap_action:
-              action: perform-action
-              perform_action: script.kitchen_mini_split_temp_down
-            grid_options:
-              columns: 3
-              rows: 1
-
-          - type: button
-            name: Kitchen Temp +
-            icon: mdi:thermometer-plus
-            tap_action:
-              action: perform-action
-              perform_action: script.kitchen_mini_split_temp_up
-            grid_options:
-              columns: 3
-              rows: 1
-
-          - type: button
-            name: Bedroom Temp -
+            name: Temp -
             icon: mdi:thermometer-minus
             tap_action:
               action: perform-action
               perform_action: script.bedroom_mini_split_temp_down
             grid_options:
-              columns: 3
+              columns: 6
               rows: 1
 
           - type: button
-            name: Bedroom Temp +
+            name: Temp +
             icon: mdi:thermometer-plus
             tap_action:
               action: perform-action
               perform_action: script.bedroom_mini_split_temp_up
             grid_options:
-              columns: 3
+              columns: 6
               rows: 1
 
       - type: grid
