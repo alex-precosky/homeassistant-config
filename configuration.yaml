@@ -2,6 +2,16 @@
 # Loads default set of integrations. Do not remove.
 default_config:
 
+homeassistant:
+  external_url: "https://chez-salex-ha.duckdns.org/"
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.19.0.0/16
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+
 lovelace:
   dashboards:
     front-door:
@@ -11,9 +21,6 @@ lovelace:
       icon: mdi:home-outline
       show_in_sidebar: true
 
-http:
-  ssl_certificate: certs/cert.pem
-  ssl_key: certs/privkey.pem
     alex-office:
       mode: yaml
       filename: dashboards/alex-office.yaml
