@@ -22,6 +22,8 @@ views:
             entity: weather.forecast_home
             forecast_type: hourly
           - !include cards/bus_schedule.yaml
+          - type: picture-entity
+            entity: camera.backyard_fluent
       - type: grid
         cards:
           - type: light
