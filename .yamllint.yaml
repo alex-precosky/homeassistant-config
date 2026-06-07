@@ -1,0 +1,11 @@
+---
+extends: default
+ignore: |
+  custom_components/
+  blueprints/
+  secrets.yaml
+rules:
+  line-length:
+    max: 120
+  comments:
+    min-spaces-from-content: 1
