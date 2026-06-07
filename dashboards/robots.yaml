@@ -1,10 +1,11 @@
+---
 views:
- - title: Robots
-   sections:
-     - type: grid
-       cards:
-        - type: entity
-          entity: vacuum.alex_bot
-          grid_options:
-            columns: 12
-            rows: 2
+  - title: Robots
+    sections:
+      - type: grid
+        cards:
+          - type: entity
+            entity: vacuum.alex_bot
+            grid_options:
+              columns: 12
+              rows: 2

@@ -1,76 +1,77 @@
+---
 views:
- - title: Hubs Office
-   sections:
-   - type: grid
-     cards:
-     - type: light
-       entity: light.hubby_office
-       grid_options:
-         columns: 6
-         rows: 4
-     - type: button
-       name: Concentrate
-       icon: mdi:brain
-       tap_action:
-         action: perform-action
-         perform_action: hue.activate_scene
-         target:
-           entity_id: scene.hubby_office_concentrate
-       grid_options:
-         columns: 3
-         rows: 1
-     - type: button
-       name: Relax
-       icon: mdi:sofa
-       tap_action:
-         action: perform-action
-         perform_action: hue.activate_scene
-         target:
-           entity_id: scene.hubby_office_relax
-       grid_options:
-         columns: 3
-         rows: 1
-     - type: button
-       name: Christmas
-       icon: mdi:string-lights
-       tap_action:
-         action: perform-action
-         perform_action: hue.activate_scene
-         target:
-           entity_id: scene.hubby_office_christmas
-       grid_options:
-         columns: 3
-         rows: 1
-     - type: button
-       name: Nightlight
-       icon: mdi:weather-night
-       tap_action:
-         action: perform-action
-         perform_action: hue.activate_scene
-         target:
-           entity_id: scene.hubby_office_nightlight
-       grid_options:
-         columns: 3
-         rows: 1
-     - type: button
-       name: Halloween
-       icon: mdi:halloween
-       tap_action:
-         action: perform-action
-         perform_action: hue.activate_scene
-         target:
-           entity_id: scene.hubby_office_halloween
-       grid_options:
-         columns: 3
-         rows: 1
-   - type: grid
-     cards:
-     - type: custom:scheduler-card
-       discover_existing: false
-       tags: downstairs
-       domains:
-         - light
-         - climate
-       title: Scheduler
-     - type: thermostat
-       entity: climate.smart_thermostat_25101157452413601202c4e7ae224b1f
+  - title: Hubs Office
+    sections:
+      - type: grid
+        cards:
+          - type: light
+            entity: light.hubby_office
+            grid_options:
+              columns: 6
+              rows: 4
+          - type: button
+            name: Concentrate
+            icon: mdi:brain
+            tap_action:
+              action: perform-action
+              perform_action: hue.activate_scene
+              target:
+                entity_id: scene.hubby_office_concentrate
+            grid_options:
+              columns: 3
+              rows: 1
+          - type: button
+            name: Relax
+            icon: mdi:sofa
+            tap_action:
+              action: perform-action
+              perform_action: hue.activate_scene
+              target:
+                entity_id: scene.hubby_office_relax
+            grid_options:
+              columns: 3
+              rows: 1
+          - type: button
+            name: Christmas
+            icon: mdi:string-lights
+            tap_action:
+              action: perform-action
+              perform_action: hue.activate_scene
+              target:
+                entity_id: scene.hubby_office_christmas
+            grid_options:
+              columns: 3
+              rows: 1
+          - type: button
+            name: Nightlight
+            icon: mdi:weather-night
+            tap_action:
+              action: perform-action
+              perform_action: hue.activate_scene
+              target:
+                entity_id: scene.hubby_office_nightlight
+            grid_options:
+              columns: 3
+              rows: 1
+          - type: button
+            name: Halloween
+            icon: mdi:halloween
+            tap_action:
+              action: perform-action
+              perform_action: hue.activate_scene
+              target:
+                entity_id: scene.hubby_office_halloween
+            grid_options:
+              columns: 3
+              rows: 1
+      - type: grid
+        cards:
+          - type: custom:scheduler-card
+            discover_existing: false
+            tags: downstairs
+            domains:
+              - light
+              - climate
+            title: Scheduler
+          - type: thermostat
+            entity: climate.smart_thermostat_25101157452413601202c4e7ae224b1f
