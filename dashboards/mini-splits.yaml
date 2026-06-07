@@ -32,8 +32,10 @@ views:
               rows: 4
 
           # ── Kitchen ──────────────────────────────────────────────────
-          - type: markdown
-            content: "## Kitchen"
+          - type: heading
+            heading: Kitchen
+
+            icon: mdi:silverware-fork-knife
             grid_options:
               columns: 12
               rows: 1
@@ -157,8 +159,10 @@ views:
               rows: 1
 
           # ── Bedroom ──────────────────────────────────────────────────
-          - type: markdown
-            content: "## Bedroom"
+          - type: heading
+            heading: Bedroom
+
+            icon: mdi:bed
             grid_options:
               columns: 12
               rows: 1
