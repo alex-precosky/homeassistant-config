@@ -8,6 +8,7 @@ views:
             entity: alarm_control_panel.alarmo
           - type: picture-entity
             entity: camera.chez_salex_doorbell_fluent
+            name: Front Door
           - show_name: true
             show_icon: true
             type: button
@@ -25,8 +26,10 @@ views:
           - !include cards/bus_schedule.yaml
           - type: picture-entity
             entity: camera.backyard_fluent
+            name: Back Yard East
           - type: picture-entity
             entity: camera.back_yard_west_fluent
+            name: Back Yard West
       - type: grid
         cards:
           - type: light
