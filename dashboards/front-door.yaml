@@ -25,6 +25,8 @@ views:
           - !include cards/bus_schedule.yaml
           - type: picture-entity
             entity: camera.backyard_fluent
+          - type: picture-entity
+            entity: camera.back_yard_west_fluent
       - type: grid
         cards:
           - type: light
