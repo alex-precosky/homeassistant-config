@@ -1,6 +1,6 @@
 # Home Assistant Configuration
 
-[![yamllint](https://github.com/alex-precosky/homeassistant-config/actions/workflows/linting.yaml/badge.svg)](https://github.com/alex-precosky/homeassistant-config/actions/workflows/linting.yaml)
+[![lint](https://github.com/alex-precosky/homeassistant-config/actions/workflows/linting.yaml/badge.svg)](https://github.com/alex-precosky/homeassistant-config/actions/workflows/linting.yaml)
 
 This is my configuration repo for [Home
 Assistant](https://www.home-assistant.io/). My Home Assistant is hosted in a
