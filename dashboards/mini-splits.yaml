@@ -106,7 +106,7 @@ views:
               target:
                 entity_id: climate.kitchen_mini_split
               data:
-                fan_mode: medium
+                fan_mode: med
             grid_options:
               columns: 3
               rows: 1
@@ -233,7 +233,7 @@ views:
               target:
                 entity_id: climate.bedroom_mini_split
               data:
-                fan_mode: medium
+                fan_mode: med
             grid_options:
               columns: 3
               rows: 1
