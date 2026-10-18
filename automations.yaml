@@ -1,2 +1,21 @@
----
-[]
+- id: '1792281597375'
+  alias: Water Leak Detection
+  description: Notify when any water leak sensor detects moisture
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.kitchensink_water_leak
+    to: 'on'
+  conditions: []
+  actions:
+  - action: notify.send_message
+    metadata: {}
+    target:
+      entity_id:
+      - notify.pixel_9_pro_xl
+      - notify.front_door_tablet
+      - notify.s_phone
+    data:
+      title: Water leak detected!
+      message: 'Leak detected at {{ trigger.to_state.name }}'
+  mode: single
