@@ -27,3 +27,9 @@ views:
                 name: Bedroom Hue Switch
               - entity: sensor.kitchensink_battery
                 name: Kitchen Sink Leak Sensor
+              - entity: sensor.bottombathroomsink_battery
+                name: Ground Floor Bathroom Sink Leak Sensor
+              - entity: sensor.firstfloorbathroomsink_battery
+                name: First Floor Bathroom Sink Leak Sensor
+              - entity: sensor.secondfloorbathroomsink_battery
+                name: Second Floor Bathroom Sink Leak Sensor
