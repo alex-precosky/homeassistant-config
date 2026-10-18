@@ -1,0 +1,29 @@
+---
+views:
+  - title: Batteries
+    icon: mdi:battery
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Battery Levels
+            heading_style: title
+          - type: entities
+            title: Battery Levels
+            show_header_toggle: false
+            state_color: true
+            entities:
+              - entity: sensor.hallway_motion_sensor_battery
+                name: Entryway Motion Sensor
+              - entity: sensor.front_door_battery
+                name: Front Door Smart Lock
+              - entity: sensor.hubby_office_dimmer_switch_battery
+                name: Hubby Office Hue Switch
+              - entity: sensor.kitchen_switch_battery
+                name: Kitchen Hue Switch
+              - entity: sensor.alex_bot_battery
+                name: Alex Bot
+              - entity: sensor.bedroom_switch_battery
+                name: Bedroom Hue Switch
+              - entity: sensor.kitchensink_battery
+                name: Kitchen Sink Leak Sensor
