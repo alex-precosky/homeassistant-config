@@ -5,13 +5,6 @@ default_config:
 homeassistant:
   external_url: "https://chez-salex-ha.duckdns.org/"
 
-http:
-  use_x_forwarded_for: true
-  trusted_proxies:
-    - 172.19.0.0/16
-  ip_ban_enabled: true
-  login_attempts_threshold: 5
-
 lovelace:
   dashboards:
     front-door:
